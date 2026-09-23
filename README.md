@@ -1,12 +1,12 @@
 # Susceptibility-field modelling and QSM inversion
 
-Inspectable numerical models by Yue Wu for the quantitative susceptibility mapping (QSM) measurement chain: susceptibility source, local magnetic field, field estimation, background-field removal and inversion. This repository is **synthetic methodological work**, not the clinical CADASIL processing pipeline or a full implementation of named QSM toolboxes.
+The [interactive QSM chapters](https://mri.ewanarc.com/qsm/index.html) introduce the physical model and interpretation; this repository provides the inspectable numerical source and tests behind selected comparisons. The models by Yue Wu span the quantitative susceptibility mapping (QSM) measurement chain: susceptibility source, local magnetic field, field estimation, background-field removal and inversion. This is **synthetic methodological work**, not the clinical CADASIL processing pipeline or a full implementation of named QSM toolboxes.
 
 ## What is implemented
 
 | File | Language | Evidence |
 | --- | --- | --- |
-| `src/qsm-core.js` | JavaScript | A 3D periodic dipole forward operator, Fourier transforms, synthetic phantoms, phase and inverse-model calculations used by the [interactive QSM chapters](https://mri.ewanarc.com/qsm/). |
+| `src/qsm-core.js` | JavaScript | A 3D periodic dipole forward operator, Fourier transforms, synthetic phantoms, phase and inverse-model calculations used by the interactive QSM chapters. |
 | `src/qsm_method_comparisons.py` | Python | Controlled 32 × 32 × 32 comparisons of background-field approaches, structural priors and field orientations, with explicit noise and support conditions. |
 | `src/qsm-comparisons.js` | JavaScript | Browser controls for selected comparisons; it expects the EwanArc page structure. |
 | `tests/numerical-checks.cjs` | JavaScript | Fifteen numerical checks, including dipole symmetry, FFT round trip, self-adjointness, background-removal and inverse-filter limits. |
